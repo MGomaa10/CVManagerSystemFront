@@ -12,7 +12,7 @@ export class ModalCvDeleteComponent implements OnInit {
   constructor(
     private _services: CvsService,
     private _notification: NotificationService,
-    @Inject(MAT_DIALOG_DATA) public StoryData: any,
+    @Inject(MAT_DIALOG_DATA) public cvData: any,
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<ModalCvDeleteComponent>
   ) {}
@@ -20,7 +20,7 @@ export class ModalCvDeleteComponent implements OnInit {
   ngOnInit(): void {}
 
   DeleteStory() {
-    this._services.deleteCV(this.StoryData.id).pipe().subscribe({
+    this._services.deleteCV(this.cvData.id).pipe().subscribe({
         next: () => {
           this.dialogRef.close();
           this._notification.success('Delete Story', 'Deleted Successfull');

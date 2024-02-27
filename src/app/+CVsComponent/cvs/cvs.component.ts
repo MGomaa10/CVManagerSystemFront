@@ -11,11 +11,11 @@ import { ModalCvModifiedComponent } from '../Modal/modal-cv-modified/modal-cv-mo
   styleUrls: ['./cvs.component.css']
 })
 export class CvsComponent implements OnInit {
-  Story: any;
+  CV: any;
   TotalStories = 0;
-  filteredStory: any[] = [];
+  filteredCvs: any[] = [];
   filterText: string = '';
-  FormStory!: FormGroup;
+  FormCV!: FormGroup;
 
   constructor(
     public dialog: MatDialog,
@@ -32,8 +32,8 @@ export class CvsComponent implements OnInit {
 
   loadData() { 
     this._service.getAllCVs().subscribe({
-      next: (stories) => {
-        this.Story = stories;
+      next: (CVs) => {
+        this.CV = CVs;
         this.applyFilter();
       }
     });
@@ -41,18 +41,18 @@ export class CvsComponent implements OnInit {
 
   applyFilter() {
     if (!this.filterText) {
-      this.filteredStory = this.Story;
+      this.filteredCvs = this.CV;
     } else {
-      this.filteredStory = this.Story.filter((story: any) =>
+      this.filteredCvs = this.CV.filter((story: any) =>
         story.personalInformation.cityName.toLowerCase().includes(this.filterText.toLowerCase())
       );
     }
   }
 
-  filterData() { this._service.GetCVsFilteredByCity("Alexandria").pipe().subscribe({ next: (stories) => { this.Story = stories } }) }
+  filterData() { this._service.GetCVsFilteredByCity("Alexandria").pipe().subscribe({ next: (stories) => { this.CV = stories } }) }
   
   pageChange(pageNumber: any) {
-    this.FormStory.controls['pageNumber'].patchValue(pageNumber, { emitEvent: false });
+    this.FormCV.controls['pageNumber'].patchValue(pageNumber, { emitEvent: false });
     this.loadData();
   }
 

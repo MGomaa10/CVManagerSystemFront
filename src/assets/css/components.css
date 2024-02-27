@@ -1974,7 +1974,9 @@ ul.ColVis_collection li {
   padding-left: 55px;
 }
 .blog-box-one .post-info p {
-  margin-top: 15px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 15px;
 }
 .blog-widget-action a {
   color: #98a6ad;

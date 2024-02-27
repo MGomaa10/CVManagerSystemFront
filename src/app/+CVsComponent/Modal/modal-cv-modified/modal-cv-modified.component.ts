@@ -18,7 +18,7 @@ export class ModalCvModifiedComponent implements OnInit {
     private _services:CvsService,
     private _notification: NotificationService,
     private formBuilder:FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public StoryData: any,
+    @Inject(MAT_DIALOG_DATA) public cvData: any,
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<ModalCvModifiedComponent>
   ) { }
@@ -35,16 +35,16 @@ export class ModalCvModifiedComponent implements OnInit {
       MobileNumber:['', Validators.required]
     })
 
-    if (this.StoryData.id != null) {
+    if (this.cvData.id != null) {
       this.actionBtn="Update";
-      this.CVForm.controls['Name'].setValue(this.StoryData.name);
-      this.CVForm.controls['CompanyName'].setValue(this.StoryData.experienceInformation.companyName);
-      this.CVForm.controls['CompanyCityName'].setValue(this.StoryData.experienceInformation.cityName);
-      this.CVForm.controls['CompanyField'].setValue(this.StoryData.experienceInformation.companyField);
-      this.CVForm.controls['FullName'].setValue(this.StoryData.personalInformation.fullName);
-      this.CVForm.controls['CityName'].setValue(this.StoryData.personalInformation.cityName);
-      this.CVForm.controls['Email'].setValue(this.StoryData.personalInformation.email);
-      this.CVForm.controls['MobileNumber'].setValue(this.StoryData.personalInformation.mobileNumber);
+      this.CVForm.controls['Name'].setValue(this.cvData.name);
+      this.CVForm.controls['CompanyName'].setValue(this.cvData.experienceInformation.companyName);
+      this.CVForm.controls['CompanyCityName'].setValue(this.cvData.experienceInformation.cityName);
+      this.CVForm.controls['CompanyField'].setValue(this.cvData.experienceInformation.companyField);
+      this.CVForm.controls['FullName'].setValue(this.cvData.personalInformation.fullName);
+      this.CVForm.controls['CityName'].setValue(this.cvData.personalInformation.cityName);
+      this.CVForm.controls['Email'].setValue(this.cvData.personalInformation.email);
+      this.CVForm.controls['MobileNumber'].setValue(this.cvData.personalInformation.mobileNumber);
     }
   }
 
@@ -57,7 +57,7 @@ export class ModalCvModifiedComponent implements OnInit {
     formdata.append('CityName', this.CVForm.controls['CityName']?.value);
     formdata.append('Email', this.CVForm.controls['Email']?.value);
     formdata.append('MobileNumber', this.CVForm.controls['MobileNumber']?.value);
-    this.StoryData.id == null ? this._services.addCV(formdata).pipe().subscribe({
+    this.cvData.id == null ? this._services.addCV(formdata).pipe().subscribe({
       next:()=>{
         this.dialogRef.close();
         this._notification.success("Add CV", "Add Successfull");
@@ -70,7 +70,7 @@ export class ModalCvModifiedComponent implements OnInit {
     formdata.append('Description', this.CVForm.controls['description']?.value);
     formdata.append('Essay', this.CVForm.controls['essay']?.value);
     formdata.append('Title', this.CVForm.controls['title']?.value);
-    this._services.editCv(formdata, this.StoryData.id).pipe().subscribe({
+    this._services.editCv(formdata, this.cvData.id).pipe().subscribe({
       next: () => {
         this.dialogRef.close();
         this._notification.success("Edit Story", "Edit Successfull");

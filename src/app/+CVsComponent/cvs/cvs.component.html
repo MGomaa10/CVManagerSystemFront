@@ -61,7 +61,7 @@
                 </div>
                 <div class="row cruds">
                     <div class="m-b-15">
-                        <div *ngFor="let item of filteredStory"  class="col-lg-3">
+                        <div *ngFor="let item of filteredCvs"  class="col-lg-3">
                    <!-- blog content -->
                    <div class="blog-box-one">
                     <div class="cover-wrapper">
@@ -73,8 +73,8 @@
                 
                     <div class="post-info">
                         <div class="date">
-                            <span class="day">{{item.storyDate | date : "d"}}</span><br>
-                            <span class="month">{{item.storyDate | date : "MMM"}}</span>
+                            <span class="day">{{item.createdOn | date : "d"}}</span><br>
+                            <span class="month">{{item.createdOn | date : "MMM"}}</span>
                         </div>
                 
                         <div class="meta-container">
@@ -85,8 +85,16 @@
                             </div>
                         </div>
                 
-                        <p class="text-muted m-b-0">
-                            {{item.experienceInformation.companyName}}
+                        <p class="text-muted mt-5">
+                         {{item.personalInformation.email}}
+                        </p>
+                
+                        <p class="text-muted mt-5">
+                         {{item.experienceInformation.companyName}}
+                        </p>
+                
+                        <p class="text-muted mt-5">
+                         {{item.experienceInformation.companyField}}
                         </p>
                 
                         <div class="row m-t-10">
