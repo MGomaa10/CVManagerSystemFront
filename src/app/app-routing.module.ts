@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
  { path: 'Home', loadChildren: () => import('./Home/home.module').then(m => m.HomeModule) },
- { path: 'Posts', loadChildren: () => import('./PostsComponent/posts.module').then(m => m.PostModule) },
  { path: 'CVSystem', loadChildren: () => import('./+CVsComponent/cv.module').then(m => m.CVModule), canActivate: [AuthGuard] },
  { path: 'Auth', loadChildren: () => import('./+AdminAuth/auth.module').then(m => m.AuthModule) },
  {

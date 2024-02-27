@@ -67,9 +67,14 @@ export class ModalCvModifiedComponent implements OnInit {
   }
 
   EditStory() {
-    formdata.append('Description', this.CVForm.controls['description']?.value);
-    formdata.append('Essay', this.CVForm.controls['essay']?.value);
-    formdata.append('Title', this.CVForm.controls['title']?.value);
+    formdata.append('Name', this.CVForm.controls['Name']?.value);
+    formdata.append('CompanyName', this.CVForm.controls['CompanyName']?.value);
+    formdata.append('CompanyCityName', this.CVForm.controls['CompanyCityName']?.value);
+    formdata.append('CompanyField', this.CVForm.controls['CompanyField']?.value);
+    formdata.append('FullName', this.CVForm.controls['FullName']?.value);
+    formdata.append('CityName', this.CVForm.controls['CityName']?.value);
+    formdata.append('Email', this.CVForm.controls['Email']?.value);
+    formdata.append('MobileNumber', this.CVForm.controls['MobileNumber']?.value);
     this._services.editCv(formdata, this.cvData.id).pipe().subscribe({
       next: () => {
         this.dialogRef.close();
