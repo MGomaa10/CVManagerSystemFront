@@ -1,0 +1,105 @@
+
+<div id="con-close-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog"> 
+<form [formGroup]="CVForm"> 
+    <div class="modal-content"> 
+        <div class="modal-header"> 
+            <button matDialogClose type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button> 
+            <h4 class="modal-title">Modal Content is Responsive</h4> 
+        </div> 
+        <div class="modal-body"> 
+            <div class="row"> 
+                <div class="col-md-6"> 
+                    <div class="form-group"> 
+                        <label for="field-1" class="control-label">Name</label> 
+                        <input formControlName="Name" type="text" class="form-control" id="field-1" placeholder="News Title"> 
+                        <mat-error  *ngIf="CVForm.get('name')?.touched && CVForm.get('name')?.hasError('required')">
+                            *CV name Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+                <div *ngIf="!StoryData.id" class="col-md-6"> 
+                    <div class="form-group">
+                        <label for="field-1" class="control-label">CompanyName</label>
+                        <input formControlName="CompanyName" type="text" class="form-control" id="field-1" placeholder="StoryDate"> 
+                        <mat-error class="validation" *ngIf="CVForm.get('CompanyName')?.touched && CVForm.get('CompanyName')?.hasError('required')">
+                            *CV Date Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div> 
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group"> 
+                        <label for="field-3" class="control-label">CompanyCityName</label>
+                        <input formControlName="CompanyCityName" type="text" class="form-control" id="field-3" placeholder="News Description"> 
+                        <mat-error *ngIf="CVForm.get('CompanyCityName')?.touched && CVForm.get('CompanyCityName')?.hasError('required')">
+                            *CV Description Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div>
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group no-margin"> 
+                        <label for="field-7" class="control-label">CompanyField</label>
+                        <input formControlName="CompanyField" class="form-control autogrow" id="field-7" placeholder="Write Essay" />
+                        <mat-error  *ngIf="CVForm.get('CompanyField')?.touched && CVForm.get('CompanyField')?.hasError('required')">
+                            *CV Essay Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div>
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group no-margin"> 
+                        <label for="field-7" class="control-label">FullName</label>
+                        <input formControlName="FullName" class="form-control autogrow" id="field-7" placeholder="Write Essay" />
+                        <mat-error  *ngIf="CVForm.get('FullName')?.touched && CVForm.get('FullName')?.hasError('required')">
+                            *CV Essay Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div> 
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group no-margin"> 
+                        <label for="field-7" class="control-label">CityName</label>
+                        <input formControlName="CityName" class="form-control autogrow" id="field-7" placeholder="Write Essay" />
+                        <mat-error  *ngIf="CVForm.get('CityName')?.touched && CVForm.get('CityName')?.hasError('required')">
+                            *CV Essay Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div>
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group no-margin"> 
+                        <label for="field-7" class="control-label">Email</label>
+                        <input formControlName="Email" class="form-control autogrow" id="field-7" placeholder="Write Essay"  />
+                        <mat-error  *ngIf="CVForm.get('Email')?.touched && CVForm.get('Email')?.hasError('required')">
+                            *CV Essay Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div>
+            <div class="row"> 
+                <div class="col-md-12"> 
+                    <div class="form-group no-margin"> 
+                        <label for="field-7" class="control-label">MobileNumber</label>
+                        <input formControlName="MobileNumber" class="form-control autogrow" id="field-7" placeholder="Write Essay" />
+                        <mat-error  *ngIf="CVForm.get('MobileNumber')?.touched && CVForm.get('MobileNumber')?.hasError('required')">
+                            *CV Essay Is required
+                        </mat-error>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="modal-footer"> 
+            <button matDialogClose type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button> 
+            <input (click)="AddStory()" type="submit" class="btn btn-info" value={{actionBtn}}>
+        </div> 
+    </div> 
+</form>
+    </div>
+</div><!-- /.modal -->

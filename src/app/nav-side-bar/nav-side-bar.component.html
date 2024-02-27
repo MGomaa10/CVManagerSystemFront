@@ -1,0 +1,161 @@
+
+    <!-- Begin page -->
+   
+<!-- LOGO -->
+            <!-- <div class="topbar-left">
+                <div class="text-center">
+                    <a href="index.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Dashb<i class="md md-album"></i>rd</span></a>
+                </div>
+            </div> -->
+                  <section class="dash_header">
+                    <div class="left_side left_side_close">
+                      <!-- <button type="button" class="btn"><i class="bi bi-three-dots-vertical"></i></button> -->
+                      <h4 class="m-0">Home</h4>
+                    </div>
+                    <div class="right_side">
+                      <ul class="btn_list">
+                        <li><button type="button" class="btn openNoti">
+                            <i class="bi bi-bell-fill"></i>
+                            
+                            <div class="dropdown-menu notification-ui_dd" aria-labelledby="navbarDropdown">
+                              <div class="notification-ui_dd-header">
+                                  <h3 class="text-center">Notification</h3>
+                              </div>
+                              <div class="notification-ui_dd-content">
+                                  <div *ngFor="let item of NotiData" class="notification-list notification-list--unread">
+                                      <div class="notification-list_img">
+                                          <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user">
+                                      </div>
+                                      <div class="notification-list_detail">
+                                          <p><b>{{item.name}}</b> Send Message</p>
+                                          <p><small>{{Hours}}</small></p>
+                                           
+                                      </div>
+                                      <div class="notification-list_feature-img">
+                                          <img src="https://i.imgur.com/AbZqFnR.jpg" alt="Feature image">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="notification-ui_dd-footer">
+                                  <a href="#!" class="btn btn-success btn-block">View All</a>
+                              </div>
+                          </div>
+                          </button>
+                        </li>
+                        <li class="dropdown"><span class="btn dropdown-toggle" id="module" data-bs-toggle="dropdown"
+                            aria-expanded="false"><button type="button" class="btn"><i class="bi bi-border-all"></i></button></span>
+                          <ul class="dropdown-menu" aria-labelledby="module">
+                            <li>
+                              <div class="links-container"><button type="button" class="dropdown-item">إدارة حساب العميل</button></div>
+                            </li>
+                            <li>
+                              <div class="links-container"><button type="button" class="dropdown-item">المستودعات</button></div>
+                            </li>
+                            <li>
+                              <div class="links-container"><button type="button" class="dropdown-item">نظام الدعم الفني</button></div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><button type="button" class="btn"><i class="bi bi-power"></i></button></li>
+                      </ul>
+                    </div>
+                  </section>
+       
+        <!-- Top Bar End -->
+      <!-- ========== Left Sidebar Start ========== -->
+       <nav class="sidebar closes">
+        <header>
+          <div class="image-text">
+            <span class="image">
+              <img src="logo.png" alt="">
+            </span>
+    
+            <div class="text logo-text">
+              <span class="name">Codinglab</span>
+              <span class="profession">Web developer</span>
+            </div>
+          </div>
+    
+          <i class='bx bx-chevron-right toggle'></i>
+        </header>
+    
+        <div class="menu-bar">
+          <div class="menu">
+    
+            <li class="search-box">
+              <i class='bx bx-search icon'></i>
+              <input type="text" placeholder="Search Ganes...">
+            </li>
+    
+            <ul class="menu-links">
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-home-alt icon'></i>
+                  <span class="text nav-text">Dashboard</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-bar-chart-alt-2 icon'></i>
+                  <span class="text nav-text">Revenue</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bi bi-kanban-fill icon'></i>
+                  <span class="text nav-text">Notifications</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bx bx-pie-chart-alt icon'></i>
+                  <span class="text nav-text">Analytics</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="#">
+                  <i class='bi bi-newspaper icon'></i>
+                  <span class="text nav-text">Likes</span>
+                </a>
+              </li>
+    
+              <li class="nav-link">
+                <a href="#">
+                  <i class={{icon}}></i>
+                  <span class="text nav-text">Wallets</span>
+                </a>
+              </li>
+    
+            </ul>
+          </div>
+    
+          <div class="bottom-content">
+            <li class="">
+              <a href="#">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Logout</span>
+              </a>
+            </li>
+    
+            <li class="mode">
+              <div class="sun-moon">
+                <i class='bx bx-moon icon moon'></i>
+                <i class='bx bx-sun icon sun'></i>
+              </div>
+              <span class="mode-text text">Dark mode</span>
+    
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+    
+          </div>
+        </div>
+    
+      </nav>
+    <!-- Left Sidebar End -->
+  
