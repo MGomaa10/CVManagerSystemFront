@@ -37,7 +37,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@swimlane/ngx-charts": "^20.1.0",
-    "@syncfusion/ej2-angular-richtexteditor": "^20.3.56",
+    "@syncfusion/ej2-angular-richtexteditor": "^20.4.53",
     "ag-grid-angular": "^27.0.0",
     "ag-grid-community": "^27.0.1",
     "angular-archwizard": "^7.0.0",
