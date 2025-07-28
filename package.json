@@ -39,7 +39,7 @@
     "@swimlane/ngx-charts": "^20.1.0",
     "@syncfusion/ej2-angular-richtexteditor": "^20.3.56",
     "ag-grid-angular": "^27.0.0",
-    "ag-grid-community": "^27.0.1",
+    "ag-grid-community": "^31.3.4",
     "angular-archwizard": "^7.0.0",
     "angular-count-to": "0.0.3",
     "angular-feather": "^6.2.0",
